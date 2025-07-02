@@ -1,5 +1,6 @@
 let arr = [5, 16, -3, 49, 13, 7, 9, 12, 49];
 
+//Find the second largest element in a given array
 function secondLargest(array) {
     //Need to have at least 2 elements in array to find second largest
     if(array.length < 2) return null;
@@ -21,8 +22,24 @@ function secondLargest(array) {
         }
     }
 
-    return secondLargestEl;
+    return secondLargestEl; //16
 }
 
-const result = secondLargest(arr);
-console.log(result);
+//const result1 = secondLargest(arr);
+//console.log(result1);
+
+//Find the largest element in a given array
+function largestElement(array) {
+    if(array.length === 0) return null;
+
+    let largestEl = -Infinity;
+
+    for(let i = 0; i < array.length; i++) {
+        if(array[i] > largestEl) largestEl = array[i];
+    }
+
+    return largestEl; //output: 49
+}
+
+//const result2 = largestElement(arr);
+//console.log(result2);
