@@ -5,6 +5,8 @@
 */
 
 function removeDuplicates(arr) {
+    if(arr.length === 0) return 0; // adding check
+
     let x = 0; // First pointer (x) will maintain a index, initially it is at 0 index
 
     for(let i = 0; i < arr.length; i++) { // Second pointer (i) will loop through the whole array to check elements
@@ -18,11 +20,13 @@ function removeDuplicates(arr) {
             arr[x] = arr[i]; // Inserting new unique element at new index of x
         }
     }
+    arr.length = x + 1; // Only unique element will be present duplicates will be removed because we are modifying the length of the array by x + 1
+
     console.log(arr);
     return (x + 1); // Returning x+1 because x is starting from 0
 }
 
-const arr1 = [0, 0, 1, 1, 2, 2, 3, 3, 3, 4]; // We have to modify this existing array, do not create new one 
+const arr1 = [0, 0, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5, 5]; // We have to modify this existing array, do not create new one 
 
 const result = removeDuplicates(arr1);
 console.log(result);
