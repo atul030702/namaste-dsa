@@ -13,7 +13,7 @@ function reverseInteger(x) {
     }
 
     const limit = Math.pow(2, 31);
-    if(reverse < -limit || reverse > limit) return 0; //Handling for 2 to the power 32, reverse number can't be less than or greater than limit
+    if(reverse < -limit || reverse > (limit - 1)) return 0; //Handling for 2 to the power 32, reverse number can't be less than or greater than limit
 
     return originalNum < 0 ? -reverse : reverse; // Checking original num was negative or positive and returning according to that
 }
