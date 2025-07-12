@@ -2,7 +2,8 @@ const nums = [0,1,0,3,12];
 
 // Both the solution are optimal for this case with O(n) time complexity
 
-/*function moveZeros(arr) {
+// Solution 1:
+function moveZeros1(arr) {
     let x = 0;
 
     for(let i = 0; i < arr.length; i++) {
@@ -11,21 +12,24 @@ const nums = [0,1,0,3,12];
             x = x + 1;
         }
     }
-    console.log(arr);
 
+    // Fill all the remaining elements to 0
     for(let j = x; j < arr.length; j++) {
-        console.log(j);
         arr[j] = 0;
     }
 
-    console.log(arr);
-}*/
+    //console.log(arr);
+}
+moveZeros1()
 
-function moveZeros(arr) {
+// Solution 2
+function moveZeros2(arr) {
     let x = 0;
 
     for(let i = 0; i < arr.length; i++) {
+
         if(arr[i] !== 0) {
+
             if(i !== x) {
                 let temp = arr[i];
                 arr[i] = arr[x];
@@ -35,8 +39,8 @@ function moveZeros(arr) {
             x = x + 1;
         }
     }
-    console.log(x);
-    console.log(arr);
+    //console.log(x);
+    //console.log(arr);
 }
 
-moveZeros(nums);
+moveZeros2(nums);
