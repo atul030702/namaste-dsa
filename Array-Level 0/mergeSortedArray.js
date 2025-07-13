@@ -62,7 +62,7 @@ function merge2(nums1, m, nums2, n) {
     }
 }
 
-const nums1 = [1, 2, 3, 0, 0, 0];
+const nums1 = [1, 2, 3, 0, 0, 0];   
 const m = 3;
 
 const nums2 = [2, 5, 6];

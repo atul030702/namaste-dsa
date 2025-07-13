@@ -1,4 +1,4 @@
-const nums = [0,1,0,3,12];
+const nums = [0,1,0,3,12,9];
 
 // Both the solution are optimal for this case with O(n) time complexity
 
@@ -18,9 +18,9 @@ function moveZeros1(arr) {
         arr[j] = 0;
     }
 
-    //console.log(arr);
+    console.log(arr);
 }
-moveZeros1()
+moveZeros1(nums);
 
 // Solution 2
 function moveZeros2(arr) {
