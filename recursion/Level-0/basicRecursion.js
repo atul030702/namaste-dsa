@@ -1,11 +1,25 @@
-let n = 10;
-
+// 1: Print from n to 1 using recursion
 function fun(num) {
-    if(num === 0) return; // base case to stop recursion
+    // Always mention base case on top of the function to stop recursion else infinite loop
+    if(num === 0) return;
 
-    console.log(num);
+    //console.log(num);
     num = num - 1; 
     fun(num); // calling recursive case
 }
 
-fun(n);
+let n = 10;
+
+//fun(n);
+
+
+// 2: Print from 1 to n using recursion
+function nToOne(num) {
+    if(num > n) return;
+
+    console.log(num);
+    num = num + 1;
+    nToOne(num);
+}
+
+nToOne(1);
