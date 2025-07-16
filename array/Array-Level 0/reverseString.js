@@ -14,15 +14,28 @@
 */
 
 function reverseString(arr) {
-
-    const arrLength = arr.length; // Total length of array
+    //solution with both for and while loop
+    /*const arrLength = arr.length; // Total length of array
     const halfLength = Math.floor(arrLength / 2); // Half length of array, Math.floor incase of decimal number
 
     for(let i = 0; i < halfLength; i++) { // loop will run for half of array length
         let temp = arr[i]; // Temporary variable to store the initial value of arr[i] element
         arr[i] = arr[arrLength - 1 - i]; // Swapping arr[i] element with arr[arrLength - 1 - i] element
         arr[arrLength - 1 - i] = temp; // Now that arr[arrLength - 1 - i] variable with temp value which is arr[i] element value
+    }*/
+
+    let start = 0;
+    let end = arr.length - 1;
+
+    while(start < end) {
+        let temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+
+        start++; // start will increase 0 -> 1
+        end--; // end will decrease 4 -> 3 -> 2, loop will break on 2 because start < end
     }
+    console.log(arr);
 
     return arr; // returning the original array
 }
