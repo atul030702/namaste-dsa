@@ -1,4 +1,4 @@
-// Implementing bubble sort O(n^2)
+// Implementing bubble sort O(n^2), refer notes for clarification
 
 function bubbleSort(arr) {
     for(let i = 0; i < arr.length - 1; i++) {
