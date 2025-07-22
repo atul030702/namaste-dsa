@@ -60,6 +60,8 @@ function merge2(nums1, m, nums2, n) {
             p2 = p2 - 1;
         }
     }
+
+    return nums1;
 }
 
 const nums1 = [1, 2, 3, 0, 0, 0];   
@@ -68,4 +70,5 @@ const m = 3;
 const nums2 = [2, 5, 6];
 const n = 3;
 
-merge(nums1, m, nums2, n);
+let result = merge2(nums1, m, nums2, n);
+console.log(result);
